@@ -1,0 +1,158 @@
+/* Reset and basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background:  url("assets/bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.navbar {
+  background-color: #333;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-attachment: fixed;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00bcd4;
+}
+
+/* Hide menu icon by default */
+.menu-icon {
+  font-size: 28px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+.card-container{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    margin-top: 35px;
+    /* background-color:red; */
+    animation: rotate 10s infinite;
+}
+
+@keyframes rotate{
+    25%{
+        transform: rotateX(70deg);
+    }
+    26%, 50%{
+        transform: rotateX(160);
+    }
+   
+}
+
+
+.card{
+    display: flex;
+    width: 25%;
+    height: 320px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("assets/card-bg.webp");
+    border-radius: 10px;
+}
+
+.card p{
+    display: none;
+}
+
+.card:hover h1{
+    color:  blue;
+}
+
+.card:hover p{
+    display: block;
+}
+
+.card a{
+   text-decoration: none;
+   color: red;
+   font-weight: 900;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+   .navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+   }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    top: 60px;
+    right: 30px;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 8px;
+    z-index: 1;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .card-container{
+    flex-direction: column;
+    width: 100%;
+    height: 800px;
+    /* background-color: red; */
+    gap: 30px;
+    animation: rotate 10s infinite;
+  }
+
+  @keyframes rotate{
+     100%{
+        transform: rotateX(0deg);
+     }
+  }
+
+  .card{
+    width: 50%;
+    height: 500px;
+    margin-bottom: 20px;
+  }
+
+
+}

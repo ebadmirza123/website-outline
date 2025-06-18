@@ -1,0 +1,74 @@
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #fdfbdf, #ebffff);
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      font-size: 2.5em;
+      margin-bottom: 50px;
+    }
+
+    .todo-section, .chapter-section {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    ul.todo-list {
+      list-style: none;
+      padding: 0;
+    }
+    ul.todo-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 25px;
+    }
+    ul.todo-list li::before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+      color: #16a085;
+    }
+    details {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-top: 20px;
+      padding: 15px;
+      transition: all 0.3s ease;
+    }
+
+    details:hover{
+        background-color: orange;
+    }
+
+    summary {
+      font-size: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #2c3e50;
+    }
+    summary:hover {
+      color: #2980b9;
+    }
+    pre {
+      background: #2c3e50;
+      color: #ecf0f1;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 14px;
+    }
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    ul {
+      margin-top: 10px;
+    }
